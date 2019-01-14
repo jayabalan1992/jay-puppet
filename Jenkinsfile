@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Syntax test') {
       steps {
-        sh 'puppet parser validate *.pp'
+        sh 'find . -name *.pp | xargs -n 1 -t puppet parser validate'
       }
     }
   }
