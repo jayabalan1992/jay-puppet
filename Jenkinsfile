@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'jayabalan/puppetdocker:latest' } }
+  agent { docker { image 'jayabalan/puppetdocker:1' } }
   stages {
     stage('Syntax test') {
       steps {
