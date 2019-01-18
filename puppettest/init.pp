@@ -1,4 +1,4 @@
 class puppettest {
-  notify => 'puppet test'
+  notify { 'puppet test'}
 }
 
