@@ -1,10 +1,13 @@
 # init file for nginx
 class jbnginx {
-  package { 'nginx' :
+  package { 'nginx':
     provider => 'yum',
     ensure   => installed,
   }
-  service { 'nginx' :
+  file { '/etc/nginx/nginx.conf':
+    content => template('nginx.conf.erb')
+  }
+  service { 'nginx':
     ensure  => 'running',
     enable => true,
   }
