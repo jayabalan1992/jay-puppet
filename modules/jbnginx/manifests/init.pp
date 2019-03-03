@@ -5,7 +5,7 @@ class jbnginx {
     ensure   => installed,
   }
   file { '/etc/nginx/nginx.conf':
-    content => template('nginx.conf.erb')
+    content => template('jbnginx/nginx.conf.erb')
   }
   service { 'nginx':
     ensure  => 'running',
