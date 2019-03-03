@@ -5,6 +5,6 @@ class jbntp {
   }
 
   service { 'ntp' :
-    state => running, 
+    ensure => running, 
   }
 }
