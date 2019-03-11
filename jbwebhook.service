@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Puppet Service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/bin/postrequest.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
