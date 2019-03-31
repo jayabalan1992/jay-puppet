@@ -1,5 +1,5 @@
 class consul_template (
-  $consul_version          = 'consul_1.4.4_linux_amd64.zip'
+  $consul_version          = 'consul_1.4.4_linux_amd64.zip',
   $consul_template_version = 'consul-template_0.20.0_darwin_386.tgz'
 ){
   package { ['wget','uzip']:
