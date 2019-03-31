@@ -11,7 +11,7 @@ class consul_template (
     cwd     => $consul_install_path
   }
   exec { 'install_consul_template':
-    command => "/usr/bin/wget /usr/local/bin/https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version} && /usr/bin/unzip ${consul_template_version}",
+    command => "/usr/bin/wget https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version} && /usr/bin/unzip ${consul_template_version}",
     cwd     => $consul_install_path
   }
 }
