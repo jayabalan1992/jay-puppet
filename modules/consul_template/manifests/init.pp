@@ -7,11 +7,11 @@ class consul_template (
   package { 'unzip': ensure => 'installed' }
 
   exec { 'install consul':
-    command => "/usr/bin/wget https://releases.hashicorp.com/consul/1.4.4/${consul_version} && /usr/bin/tar -xvf ${consul_version}",
+    command => "/usr/bin/wget https://releases.hashicorp.com/consul/1.4.4/${consul_version}; /usr/bin/tar -xvf ${consul_version}",
     cwd     => $consul_install_path
   }
   exec { 'install_consul_template':
-    command => "/usr/bin/wget https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version} && /usr/bin/unzip ${consul_template_version}",
+    command => "/usr/bin/wget https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version}; /usr/bin/unzip ${consul_template_version}",
     cwd     => $consul_install_path
   }
 }
