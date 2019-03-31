@@ -3,5 +3,5 @@ node /web\d+\.jb.com/ {
   class { 'jbntp': }
 }
 node /haproxy/ {
-  include role::haproxy::server
+  include ::role::haproxy::server
 }
