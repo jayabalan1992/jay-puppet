@@ -6,9 +6,11 @@ class consul_template (
     ensure => installed,
   }
   exec { 'install consul':
-    command => "wget /usr/local/bin/https://releases.hashicorp.com/consul/1.4.4/${consul_version} && tar -xvf ${consul_version}"
+    command => "wget https://releases.hashicorp.com/consul/1.4.4/${consul_version} && tar -xvf ${consul_version}",
+    path    => '/usr/local/bin'
   }
   exec { 'install_consul_template':
-    command => "wget /usr/local/bin/https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version} && uzip ${consul_template_version}"
+    command => "wget /usr/local/bin/https://releases.hashicorp.com/consul-template/0.20.0/${consul_template_version} && uzip ${consul_template_version}",
+    path    => '/usr/local/bin'
   }
 }
