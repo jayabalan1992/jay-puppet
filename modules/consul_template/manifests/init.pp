@@ -8,6 +8,7 @@ class consul_template (
 
   exec { 'install consul':
     command => "/usr/bin/wget https://releases.hashicorp.com/consul/1.4.4/${consul_version}; /usr/bin/tar -xvf ${consul_version}",
+    creates => '/usr/local/bin/consul',
     cwd     => $consul_install_path
   }
   exec { 'install_consul_template':

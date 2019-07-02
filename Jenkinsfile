@@ -1,3 +1,4 @@
+#syntax test
 pipeline {
   agent { docker { image 'jayabalan/puppetdocker:1' } }
   stages {
