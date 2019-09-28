@@ -5,3 +5,6 @@ node /web\d+\.jb.com/ {
 node /haproxy/ {
   include ::role::haproxy::server
 }
+node /slave1/ {
+  include ::profile::base
+}
